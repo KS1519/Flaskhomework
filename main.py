@@ -30,7 +30,6 @@ def create_twit():
 @app.route('/twit', methods=['GET'])
 def read_twits():
     return jsonify({'twits': [twit.__dict__ for twit in twits]})
-    # return jsonify({'twits': twits})
 
 if __name__ == '__main__':
     app.run(debug=True)
