@@ -31,6 +31,16 @@ def create_twit():
 def read_twits():
     return jsonify({'twits': [twit.__dict__ for twit in twits]})
 
+@app.route('/twit', methods=['PUT'])
+def update_twit():
+    return jsonify({'twits': [twit.__dict__ for twit in twits]})
+
+@app.route('/twit', methods=['DELETE'])
+def delete_twit():
+    return jsonify({'twits': [twit.__dict__ for twit in twits]})
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 
